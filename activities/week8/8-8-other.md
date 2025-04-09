@@ -5,23 +5,33 @@ The following sign posts resources for features not covered in this tutorial.
 ## Integrating your Dash app in your Flask app
 
 Try [Integrate Dash Apps into Your Flask App](https://ploomber.io/blog/dash-in-flask/), though ignore the part about
-deploying to the cloud as you are not allowed to do that for the courswork.
+deploying to the cloud as you are not allowed to do that for the coursework. There is an example based on this in the 
+[tutorial apps repository](https://github.com/nicholsons/comp0034-tutorial-apps-flask/tree/main/src/ex_dash_in_flask).
 
-There is a Hackers and Slackers tutorial on integrating Flask and Dash however both apps have changed substantially
-since this was written.
+There is an earlier Hackers and Slackers tutorial on integrating Flask and Dash however both packages have changed 
+substantially since this was written so it may no longer work.
 
 ## Authentication
 
 Please do not apply authentication in your coursework unless it is fundamental to how your app works, for example if you
 need to know an identity to be able to complete features such as customising data and saving those customisations.
-It is very widely documented with readily available boilerplate code, and so is not likely to improve the marks awarded
-for your app.
+It is widely documented with readily available boilerplate code.
 
 A few tutorial links that cover authentication:
 
 - [Miguel Grinberg's mega tutorial episode on login](https://blog.miguelgrinberg.com/post/the-flask-mega-tutorial-part-v-user-logins)
 - [Flask Friday - YouTube](https://www.youtube.com/watch?v=bxyaJ8w_wak)
 - [Digital Ocean](https://www.digitalocean.com/community/tutorials/how-to-add-authentication-to-your-app-with-flask-login)
+
+There are numerous libraries for authentication. A popular library for apps with pages/views is Flask-Login. 
+
+If you develop a REST API app then consider a JSON Web Token approach instead using libraries such as Flask-JWT-Extended 
+or PyJWT.
+
+There are examples in the tutorial apps repository:
+
+- [Flask-Login demo](https://github.com/nicholsons/comp0034-tutorial-apps-flask/tree/main/src/ex_flasklogin)
+- [Flask-JWT-Extended demo](https://github.com/nicholsons/comp0034-tutorial-apps-flask/tree/main/src/ex_jwtextended)
 
 ## REST API
 
@@ -36,11 +46,7 @@ If you decide to generate this type of app in the coursework:
 
 - include code that can be used with [HTTPie terminal](https://httpie.io/cli) to check each route. Required for marking.
 - if you implement authentication, provide credentials the marker can use. Required for marking.
-
-You will not be generating pages so please make sure that your app evidences sufficient 'features', consider:
-
-- use SQLAlchemy to interact with the database instead of sqlite3
-- document with swagger or other
+- to meet the marking criteria you will have to add routes with HTML pages that use data from your REST API routes.
 
 ### REST API links
 
